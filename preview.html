@@ -49,6 +49,17 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 .nav-social a{display:flex!important;align-items:center;justify-content:center;width:32px;height:32px;padding:0!important;border-radius:8px}
 a.ns-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
 a.ns-yt{background:#ff0000;width:40px!important}
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+a.sc{display:flex;align-items:center;gap:16px;padding:18px 20px;background:#f3ece0;border:1px solid #e2d8c7;border-radius:14px;text-decoration:none;color:#1d1a17;transition:transform .2s,border-color .2s}
+a.sc:hover{transform:translateY(-2px);border-color:#c9bca5;color:#1d1a17}
+.sc-ic{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:13px}
+.sc-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.sc-yt{background:#ff0000;width:64px}
+.sc-ml{background:#8a2432}
+.sc-tx{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.sc-nm{font-weight:700;font-size:16px}
+.sc-hd{font-size:14px;color:#6b645a;overflow-wrap:anywhere}
+.sc-arr{flex:0 0 auto;color:#8a2432}
 .ec{position:relative;margin:-26px -26px 14px;aspect-ratio:4/5;overflow:hidden;background:#e8dfd0}
 .ec img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s}
 .ec img.on{opacity:1}
@@ -90,7 +101,7 @@ a.ns-yt{background:#ff0000;width:40px!important}
 <a href="#about" style="text-decoration: none; padding: 14px 0">About</a>
 <a href="#live" style="text-decoration: none; padding: 14px 0"><span class="nav-long">Recent </span>performances</a>
 <a href="#watch" style="text-decoration: none; padding: 14px 0">Watch live</a>
-<span class="nav-social"><a href="https://www.instagram.com/shivek.live/" aria-label="Instagram" class="ns-ig"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg></a><a href="https://youtube.com/@shiveksacklecha7450" aria-label="YouTube" class="ns-yt"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="#fff" d="M9.5 8.2v7.6l6.6-3.8z"></path></svg></a></span>
+<a href="#bookings" style="text-decoration: none; padding: 14px 0">Bookings<span class="nav-long"> &amp; social</span></a>
 </nav>
 </div>
 </header>
@@ -204,10 +215,15 @@ a.ns-yt{background:#ff0000;width:40px!important}
 
 <section id="bookings" style="background: #f3ece0; border-top: 1px solid #e8dfd0">
 <div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 80px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Bookings</p>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Bookings &amp; social</p>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance; max-width: 760px">Book Shivek for your concert, festival or celebration.</h2>
 <p style="margin: 0; color: #4a443d; max-width: 620px">Available as an opening act or featured performer. Email <a href="mailto:shiveksacklecha@gmail.com">shiveksacklecha@gmail.com</a> or send a message on Instagram.</p>
 <a href="mailto:shiveksacklecha@gmail.com" style="display: flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; min-height: 52px; padding: 0 28px; box-sizing: border-box; margin-top: 10px; background: #8a2432; color: #faf6ef; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Email for bookings</a>
+<div class="sc-grid" id="social" style="width: 100%; margin-top: 18px">
+<a href="https://www.instagram.com/shivek.live/" class="sc"><span class="sc-ic sc-ig"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></span><span class="sc-tx"><span class="sc-nm">Instagram</span><span class="sc-hd">@shivek.live</span></span><svg aria-hidden="true" class="sc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<a href="https://youtube.com/@shiveksacklecha7450" class="sc"><span class="sc-ic sc-yt"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24"><path fill="#fff" d="M9.5 8.2v7.6l6.6-3.8z"></path></svg></span><span class="sc-tx"><span class="sc-nm">YouTube</span><span class="sc-hd">@shiveksacklecha7450</span></span><svg aria-hidden="true" class="sc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<a href="mailto:shiveksacklecha@gmail.com" class="sc"><span class="sc-ic sc-ml"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span><span class="sc-tx"><span class="sc-nm">Email</span><span class="sc-hd">shiveksacklecha@gmail.com</span></span><svg aria-hidden="true" class="sc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+</div>
 </div>
 </section>
 
