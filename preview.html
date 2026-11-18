@@ -44,8 +44,9 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 .ec-arrow:focus-visible{outline:2px solid #8a2432;outline-offset:2px}
 .ec-prev{left:10px}.ec-next{right:10px}
 .ec .ec-dots{z-index:2}
+nav[aria-label="Main"]{gap:0 36px!important}
 .nav-social{display:inline-flex;gap:8px;margin-left:4px}
-@media (max-width:560px){.nav-long{display:none}nav[aria-label="Main"] a{white-space:nowrap}nav[aria-label="Main"]{gap:0 12px!important;font-size:10px!important;letter-spacing:.06em!important;flex-wrap:nowrap!important}.nav-social{gap:6px;margin-left:0}.nav-social a{width:28px!important;height:28px!important;border-radius:7px}a.ns-yt{width:34px!important}}
+@media (max-width:560px){header > div{padding-left:16px!important;padding-right:16px!important}nav[aria-label="Main"]{width:100%;justify-content:space-between}.nav-long{display:none}nav[aria-label="Main"] a{white-space:nowrap}nav[aria-label="Main"]{gap:0 12px!important;font-size:10px!important;letter-spacing:.06em!important;flex-wrap:nowrap!important}.nav-social{gap:6px;margin-left:0}.nav-social a{width:28px!important;height:28px!important;border-radius:7px}a.ns-yt{width:34px!important}}
 .nav-social a{display:flex!important;align-items:center;justify-content:center;width:32px;height:32px;padding:0!important;border-radius:8px}
 a.ns-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
 a.ns-yt{background:#ff0000;width:40px!important}
@@ -96,12 +97,12 @@ a.sc:hover{transform:translateY(-2px);border-color:#c9bca5;color:#1d1a17}
 <div style="background: #faf6ef; color: #1d1a17; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.7">
 
 <header style="position: sticky; top: 0; z-index: 5; background: rgba(250,246,239,0.92); border-bottom: 1px solid #e8dfd0">
-<div style="max-width: 1160px; margin: 0 auto; padding: 8px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 0 28px; align-items: center; justify-content: flex-end">
+<div style="max-width: 1160px; margin: 0 auto; padding: 8px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 0 28px; align-items: center; justify-content: center">
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase">
 <a href="#about" style="text-decoration: none; padding: 14px 0">About</a>
 <a href="#live" style="text-decoration: none; padding: 14px 0"><span class="nav-long">Recent </span>performances</a>
 <a href="#watch" style="text-decoration: none; padding: 14px 0">Watch live</a>
-<a href="#bookings" style="text-decoration: none; padding: 14px 0">Bookings<span class="nav-long"> &amp; social</span></a>
+<a href="#bookings" style="text-decoration: none; padding: 14px 0">Bookings/Social</a>
 </nav>
 </div>
 </header>
@@ -215,7 +216,7 @@ a.sc:hover{transform:translateY(-2px);border-color:#c9bca5;color:#1d1a17}
 
 <section id="bookings" style="background: #f3ece0; border-top: 1px solid #e8dfd0">
 <div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 80px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Bookings &amp; social</p>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Bookings / Social</p>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance; max-width: 760px">Book Shivek for your concert, festival or celebration.</h2>
 <p style="margin: 0; color: #4a443d; max-width: 620px">Available as an opening act or featured performer. Email <a href="mailto:shiveksacklecha@gmail.com">shiveksacklecha@gmail.com</a> or send a message on Instagram.</p>
 <a href="mailto:shiveksacklecha@gmail.com" style="display: flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; min-height: 52px; padding: 0 28px; box-sizing: border-box; margin-top: 10px; background: #8a2432; color: #faf6ef; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Email for bookings</a>
