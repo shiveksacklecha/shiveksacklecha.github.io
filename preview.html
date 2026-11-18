@@ -34,6 +34,9 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 .ec-dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 3px rgba(0,0,0,.4)}
 .ec-dots button.on::before{background:#fff}
 @media (prefers-reduced-motion: reduce){.ec img{transition:none}}
+.ec-about{margin:0;width:100%}
+.ec-cap{position:absolute;left:16px;bottom:44px;padding:6px 12px;background:rgba(250,246,239,.92);color:#1d1a17;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .8s}
+.ec-about img:nth-of-type(2).on ~ .ec-cap{opacity:1}
 .spw{display:flex;gap:8px;height:clamp(440px,52vw,560px)}
 .sp{position:relative;flex:0 0 64px;border:0;padding:0;margin:0;overflow:hidden;cursor:pointer;background:var(--c);color:#fff;text-align:left;font:inherit;transition:flex .55s cubic-bezier(.6,0,.2,1)}
 .sp.on{flex:1 1 auto;cursor:default}
@@ -88,7 +91,7 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 
 <section id="about" style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 88px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 72px; align-items: center">
 <div style="position: relative; flex: 1 1 320px; min-width: 0; max-width: 480px">
-<img src="images/guitar.jpg" alt="Shivek Sacklecha singing and playing acoustic guitar" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 18%; display: block">
+<div class="ec ec-about"><img class="on" src="images/guitar.jpg" alt="Shivek Sacklecha singing and playing acoustic guitar" style="object-position:center 18%"><img src="images/with2.jpg" alt="Shivek Sacklecha with Salim Merchant" style="object-position:center 30%"><span class="ec-cap" aria-hidden="true">With Salim Merchant</span><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2: with Salim Merchant"></button></div></div>
 </div>
 <div style="flex: 999 1 360px; min-width: 0; max-width: 540px; display: flex; flex-direction: column; gap: 20px">
 <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">About</p>
