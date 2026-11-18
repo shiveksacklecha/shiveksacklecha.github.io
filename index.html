@@ -11,205 +11,233 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
-body{margin:0;background:#0b0b0b}
+body{margin:0;background:#faf6ef}
 html{scroll-behavior:smooth}
-a{color:#f2efe9}a:hover{color:#e2c676}
-a:focus-visible{outline:2px solid #e2c676;outline-offset:3px}
+a{color:#1d1a17}a:hover{color:#8a2432}
+a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 @keyframes heroB{0%,28%{opacity:0}33%,61%{opacity:1}66%,100%{opacity:0}}
 @keyframes heroC{0%,61%{opacity:0}66%,95%{opacity:1}100%{opacity:0}}
 .heroB{animation:heroB 18s infinite}
 .heroC{animation:heroC 18s infinite}
 @media (prefers-reduced-motion: reduce){.heroB,.heroC{animation:none}}
+#top{color:#fbf7f0}#top a:not([href="#bookings"]){color:#fbf7f0}#top a:not([href="#bookings"]){border-color:rgba(251,247,240,0.55)!important}#top h1~p{color:#f3ece2!important}#top h1+p+p{color:#f0b35a!important}
+.sp.on .spw .sp:not(.on):hover @keyframes spProg{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.sp.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.85);transform-origin:left;animation:spProg 3.5s linear}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;margin-top:18px}
+@media (max-width:560px){.hero-cta a.hc-primary{flex:1 1 100%;justify-content:center}.hero-cta{gap:14px 18px}.hero-social{border-left:0!important;padding-left:0!important;margin-left:auto}}
+#top a.hc-primary{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 30px;background:#8a2432;color:#fbf7f0;border-radius:4px;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .2s,transform .2s}
+#top a.hc-primary:hover{background:#a12d3c;transform:translateY(-1px)}
+#top a.hc-watch{display:inline-flex;align-items:center;gap:12px;min-height:52px;color:#fbf7f0;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.hc-play{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(251,247,240,.8);padding-left:3px;box-sizing:border-box;transition:background .2s,color .2s}
+#top a.hc-watch:hover .hc-play{background:#fbf7f0;color:#8a2432}
+.hero-social{display:flex;align-items:center;gap:10px;padding-left:22px;border-left:1px solid rgba(251,247,240,.35)}
+#top .hero-social a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:11px;box-shadow:none;transition:transform .2s}
+#top .hero-social a:hover{transform:translateY(-2px) scale(1.05)}
+#top a.hs-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+#top a.hs-yt{background:#ff0000;width:58px;border-radius:12px}
+#top a.hs-ml{background:#fbf7f0}
+.ec-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:50%;background:rgba(250,246,239,.88);color:#1d1a17;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:2;transition:background .2s}
+.ec-arrow:hover{background:#fff}
+.ec-arrow:focus-visible{outline:2px solid #8a2432;outline-offset:2px}
+.ec-prev{left:10px}.ec-next{right:10px}
+.ec .ec-dots{z-index:2}
+nav[aria-label="Main"]{gap:0 36px!important}
+.nav-social{display:inline-flex;gap:8px;margin-left:4px}
+@media (max-width:560px){header > div{padding-left:16px!important;padding-right:16px!important}nav[aria-label="Main"]{width:100%;justify-content:space-between}.nav-long{display:none}nav[aria-label="Main"] a{white-space:nowrap}nav[aria-label="Main"]{gap:0 12px!important;font-size:10px!important;letter-spacing:.06em!important;flex-wrap:nowrap!important}.nav-social{gap:6px;margin-left:0}.nav-social a{width:28px!important;height:28px!important;border-radius:7px}a.ns-yt{width:34px!important}}
+.nav-social a{display:flex!important;align-items:center;justify-content:center;width:32px;height:32px;padding:0!important;border-radius:8px}
+a.ns-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+a.ns-yt{background:#ff0000;width:40px!important}
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+a.sc{display:flex;align-items:center;gap:16px;padding:18px 20px;background:#f3ece0;border:1px solid #e2d8c7;border-radius:14px;text-decoration:none;color:#1d1a17;transition:transform .2s,border-color .2s}
+a.sc:hover{transform:translateY(-2px);border-color:#c9bca5;color:#1d1a17}
+.sc-ic{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:13px}
+.sc-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.sc-yt{background:#ff0000;width:64px}
+.sc-ml{background:#8a2432}
+.sc-tx{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.sc-nm{font-weight:700;font-size:16px}
+.sc-hd{font-size:14px;color:#6b645a;overflow-wrap:anywhere}
+.sc-arr{flex:0 0 auto;color:#8a2432}
+.ec{position:relative;margin:-26px -26px 14px;aspect-ratio:4/5;overflow:hidden;background:#e8dfd0}
+.ec img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s}
+.ec img.on{opacity:1}
+.ec-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:4px}
+.ec-dots button{width:26px;height:26px;border:0;padding:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.ec-dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 3px rgba(0,0,0,.4)}
+.ec-dots button.on::before{background:#fff}
+@media (prefers-reduced-motion: reduce){.ec img{transition:none}}
+.ec-about{margin:0;width:100%}
+.ec-about .ec-dots{gap:0}.ec-about .ec-dots button{width:18px}.ec-about .ec-dots button::before{width:6px;height:6px}
+.ec-cap{position:absolute;left:16px;bottom:44px;padding:6px 12px;background:rgba(250,246,239,.92);color:#1d1a17;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .8s}
+.ec-about img.salim.on ~ .ec-cap{opacity:1}
+.spw{display:flex;gap:8px;height:clamp(440px,52vw,560px)}
+.sp{position:relative;flex:0 0 64px;border:0;padding:0;margin:0;overflow:hidden;cursor:pointer;background:var(--c);color:#fff;text-align:left;font:inherit;transition:flex .55s cubic-bezier(.6,0,.2,1)}
+.sp.on{flex:1 1 auto;cursor:default}
+.sp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s .15s}
+.sp.on img{opacity:1}
+.sp-shade{position:absolute;inset:0;background:linear-gradient(0deg,var(--c) 0%,color-mix(in srgb,var(--c) 70%,transparent) 30%,transparent 62%);opacity:0;transition:opacity .5s}
+.sp.on .sp-shade{opacity:1}
+.sp-num{position:absolute;top:16px;left:18px;font-size:13px;font-weight:700;letter-spacing:.14em}
+.sp-vert{position:absolute;bottom:20px;left:50%;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;transition:opacity .3s}
+.sp.on .sp-vert{opacity:0}
+.sp-body{position:absolute;left:24px;right:24px;bottom:24px;display:flex;flex-direction:column;gap:6px;opacity:0;transform:translateY(12px);transition:opacity .4s .25s,transform .4s .25s}
+.sp.on .sp-body{opacity:1;transform:none}
+.sp-name{font-family:'Inter',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,44px);line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+.sp-ev{font-size:15px;opacity:.95}
+.sp-where{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.sp:focus-visible{outline:3px solid #1d1a17;outline-offset:3px}
+@media (max-width:560px){.sp-name{font-size:22px;overflow-wrap:anywhere}.sp{flex-basis:44px}.sp-num{left:12px;font-size:12px}.sp-body{left:18px;right:18px;bottom:18px}}
+@media (prefers-reduced-motion: reduce){.sp.on::after{animation:none}.sp,.sp img,.sp-shade,.sp-body,.sp-vert{transition:none}}
 </style>
 </head>
 <body>
-<div style="background: #0b0b0b; color: #f2efe9; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.7">
+<div style="background: #faf6ef; color: #1d1a17; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.7">
 
-<header style="position: sticky; top: 0; z-index: 5; background: rgba(11,11,11,0.82); border-bottom: 1px solid #1f1c17">
-<div style="max-width: 1160px; margin: 0 auto; padding: 8px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 0 28px; align-items: center; justify-content: space-between">
-<a href="#top" style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 20px; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; padding: 10px 0">Shivek Sacklecha</a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 0 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase">
+<header style="position: sticky; top: 0; z-index: 5; background: rgba(250,246,239,0.92); border-bottom: 1px solid #e8dfd0">
+<div style="max-width: 1160px; margin: 0 auto; padding: 8px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 0 28px; align-items: center; justify-content: center">
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase">
 <a href="#about" style="text-decoration: none; padding: 14px 0">About</a>
-<a href="#live" style="text-decoration: none; padding: 14px 0">Recent performances</a>
-<a href="#highlights" style="text-decoration: none; padding: 14px 0">Highlights</a>
-<a href="#repertoire" style="text-decoration: none; padding: 14px 0">Repertoire</a>
+<a href="#live" style="text-decoration: none; padding: 14px 0"><span class="nav-long">Recent </span>performances</a>
+<a href="#watch" style="text-decoration: none; padding: 14px 0">Watch live</a>
+<a href="#bookings" style="text-decoration: none; padding: 14px 0">Bookings/Social</a>
 </nav>
 </div>
 </header>
 
 <section id="top" style="position: relative; height: clamp(620px, 68vw, 860px); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end">
-<img src="images/hero.jpg" alt="Shivek Sacklecha singing on stage with his band" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 25%">
-<img class="heroB" src="images/teal.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; opacity: 0">
-<img class="heroC" src="images/portrait.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; opacity: 0">
-<div aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(11,11,11,0.35) 0%, rgba(11,11,11,0.2) 30%, rgba(11,11,11,0.82) 70%, #0b0b0b 100%)"></div>
+<video autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-label="Shivek Sacklecha performing live" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%"><source src="video/hero.mp4" type="video/mp4"></video>
+<div aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(20,12,10,0.35) 0%, rgba(20,12,10,0.15) 30%, rgba(20,12,10,0.8) 72%, rgba(20,12,10,0.95) 100%)"></div>
 <div style="position: relative; width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(54px, 10vw, 128px); line-height: 0.92; letter-spacing: 0.01em; text-transform: uppercase; max-width: 9em">Shivek Sacklecha</h1>
-<p style="margin: 0; font-size: clamp(17px, 1.8vw, 21px); color: #e4e0d8">Live Performer | Singer | Musician | London</p>
-<p style="margin: 0; font-size: clamp(14px, 1.4vw, 16px); letter-spacing: 0.08em; color: #cdb168">Bollywood | Sufi | Indian Classical | Folk</p>
-<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px; width: 100%; max-width: 420px">
-<a href="#bookings" style="display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; background: linear-gradient(90deg, #b8923a 0%, #ecd68c 50%, #b8923a 100%); color: #14110a; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Bookings</a>
-<a href="https://www.instagram.com/shivek.live/" style="display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; border: 1px solid #3a352c; background: rgba(11,11,11,0.55); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Instagram</a>
-<a href="https://youtube.com/@shiveksacklecha7450" style="display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; border: 1px solid #3a352c; background: rgba(11,11,11,0.55); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">YouTube</a>
+<p style="margin: 0; font-size: clamp(17px, 1.8vw, 21px); color: #3d3832">Live Performer | Singer | Musician | London</p>
+<p style="margin: 0; font-size: clamp(14px, 1.4vw, 16px); letter-spacing: 0.08em; color: #8a2432">Bollywood | Sufi | Indian Classical | Folk</p>
+<div class="hero-cta">
+<a href="#bookings" class="hc-primary">Book Shivek <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#watch" class="hc-watch"><span class="hc-play"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"></path></svg></span>Watch live</a>
+<div class="hero-social" aria-label="Follow Shivek">
+<a href="https://www.instagram.com/shivek.live/" aria-label="Instagram" class="hs-ig"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a>
+<a href="https://youtube.com/@shiveksacklecha7450" aria-label="YouTube" class="hs-yt"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" d="M9.5 8.2v7.6l6.6-3.8z"></path></svg></a>
+<a href="mailto:shiveksacklecha@gmail.com" aria-label="Email" class="hs-ml"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8a2432" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></a>
+</div>
 </div>
 </div>
 </section>
 
 <section id="about" style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 88px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 72px; align-items: center">
 <div style="position: relative; flex: 1 1 320px; min-width: 0; max-width: 480px">
-<img src="images/guitar.jpg" alt="Shivek Sacklecha singing and playing acoustic guitar" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 18%; display: block">
+<div class="ec ec-about"><img class="on" src="images/guitar.jpg" alt="Shivek Sacklecha singing and playing acoustic guitar" style="object-position:center 18%"><img class="salim" src="images/with2.jpg" alt="Shivek Sacklecha with Salim Merchant" style="object-position:center 30%"><img src="images/hero.jpg" alt="Shivek Sacklecha singing on stage with his band" style="object-position:55% 25%"><img src="images/teal.jpg" alt="Shivek Sacklecha singing under a spotlight" style="object-position:center 30%"><img src="images/portrait.jpg" alt="Shivek Sacklecha on stage under red lights" style="object-position:center 15%"><img src="images/ab_g1.jpg" alt="Shivek Sacklecha playing guitar for a seated audience" style="object-position:center 45%"><img src="images/ab_g2.jpg" alt="Shivek Sacklecha singing with guitar at an intimate gathering" style="object-position:center 40%"><img src="images/ab_g3.jpg" alt="Shivek Sacklecha playing acoustic guitar" style="object-position:center 30%"><img src="images/ab_g4.jpg" alt="Shivek Sacklecha with guitar at an intimate gathering" style="object-position:30% center"><img src="images/ab_g5.jpg" alt="Shivek Sacklecha smiling with his guitar" style="object-position:center 45%"><img src="images/ab_g6.jpg" alt="Shivek Sacklecha singing into a microphone" style="object-position:center 30%"><img src="images/suit.jpg" alt="Shivek Sacklecha in a suit performing with dancers" style="object-position:30% 35%"><img src="images/ab_g8.jpg" alt="Shivek Sacklecha singing on stage" style="object-position:center 30%"><img src="images/ab_g9.jpg" alt="Shivek Sacklecha singing on stage with dancers" style="object-position:center 40%"><span class="ec-cap" aria-hidden="true">With Salim Merchant</span><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2: with Salim Merchant" class=""></button><button type="button" aria-label="Photo 3" class=""></button><button type="button" aria-label="Photo 4" class=""></button><button type="button" aria-label="Photo 5" class=""></button><button type="button" aria-label="Photo 6" class=""></button><button type="button" aria-label="Photo 7" class=""></button><button type="button" aria-label="Photo 8" class=""></button><button type="button" aria-label="Photo 9" class=""></button><button type="button" aria-label="Photo 10" class=""></button><button type="button" aria-label="Photo 11" class=""></button><button type="button" aria-label="Photo 12" class=""></button><button type="button" aria-label="Photo 13" class=""></button><button type="button" aria-label="Photo 14" class=""></button></div></div>
 </div>
 <div style="flex: 999 1 360px; min-width: 0; max-width: 540px; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #cdb168">About</p>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">About</p>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance">Trained in classical. At home on the big stage.</h2>
-<p style="margin: 0; color: #cfcac0">Shivek Sacklecha is a London-based, classically trained vocalist with over 10 years of experience in Indian classical and Bollywood music. He also plays guitar and keyboard.</p>
-<p style="margin: 0; color: #cfcac0">He performs across the UK at concerts, festivals, corporate events and private celebrations, bringing musical versatility, strong vocals and an engaging stage presence to every audience.</p>
+<p style="margin: 0; color: #4a443d">Shivek Sacklecha is a London-based, classically trained vocalist with over 10 years of experience in Indian classical and Bollywood music. He also plays guitar and keyboard.</p>
+<p style="margin: 0; color: #4a443d">He performs across the UK at concerts, festivals, corporate events and private celebrations, bringing musical versatility, strong vocals and an engaging stage presence to every audience.</p>
+<p style="margin: 0; color: #4a443d">His repertoire spans Bollywood, Sufi, Indian classical and folk. Ten years of classical training shape every set, from a qawwali with full orchestra to a Bollywood favourite the whole room sings along to.</p>
+<div id="watch" style="flex: 1 1 100%; display: flex; flex-direction: column; gap: 20px; margin-top: 24px">
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Watch live</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; width: 100%; margin: 0">
+<iframe src="https://www.instagram.com/reel/Dbt7ddkM3wr/embed/" title="Shivek Sacklecha: Live clip 1 on Instagram" loading="lazy" allowtransparency="true" allow="encrypted-media; autoplay; fullscreen" style="width: 100%; max-width: 420px; height: 640px; border: 1px solid #e2d8c7; border-radius: 8px; background: #fff; justify-self: center"></iframe>
+<iframe src="https://www.instagram.com/reel/DfIkcFNu9EQ/embed/" title="Shivek Sacklecha: Live clip 2 on Instagram" loading="lazy" allowtransparency="true" allow="encrypted-media; autoplay; fullscreen" style="width: 100%; max-width: 420px; height: 640px; border: 1px solid #e2d8c7; border-radius: 8px; background: #fff; justify-self: center"></iframe>
+</div>
+<div style="display: flex"><a href="https://youtube.com/@shiveksacklecha7450" style="flex: 1 1 260px; max-width: 420px; display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; border: 1px solid #c9bca5; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">More on YouTube</a></div>
+</div>
 </div>
 </section>
 
-<section id="live" style="border-top: 1px solid #1f1c17">
+<section id="live" style="border-top: 1px solid #e8dfd0">
 <div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 88px; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #cdb168">Recent performances</p>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Recent performances</p>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance">Stages across the UK in 2026</h2>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">1 November 2026</p>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/with1.jpg" alt="Shivek Sacklecha with Kavita Krishnamurthy" style="object-position:center 35%"></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">1 November 2026</p>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Diwali Celebration</h3>
-<p style="margin: 0; color: #cfcac0">With Kavita Krishnamurthy and orchestra</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Royal Albert Hall <span style="color: #6e695f">/</span> London</p>
+<p style="margin: 0; color: #4a443d">With Kavita Krishnamurthy and orchestra</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a"><strong style="color: #8a2432; font-weight: 700">Royal Albert Hall</strong> <span style="color: #a59a88">/</span> London</p>
 </div>
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">28 October 2026</p>
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Meta Diwali Event</h3>
-<p style="margin: 0; color: #cfcac0">Corporate event</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Meta (Facebook)</p>
-</div>
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">24 October 2026</p>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/oqp1.jpg" alt="Shivek Sacklecha backstage at the Royal Albert Hall" style="object-position:center 30%"><img class="" src="images/oqp2.jpg" alt="Shivek Sacklecha with fellow performers at the Orchestral Qawwali Project" style="object-position:center 30%"><img class="" src="images/oqp3.jpg" alt="Shivek Sacklecha with a fellow performer at the Orchestral Qawwali Project" style="object-position:center 30%"><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2" class=""></button><button type="button" aria-label="Photo 3" class=""></button></div></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">24 October 2026</p>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Orchestral Qawwali Project</h3>
-<p style="margin: 0; color: #cfcac0">Concert</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Royal Albert Hall <span style="color: #6e695f">/</span> London</p>
+<p style="margin: 0; color: #4a443d">Concert</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a"><strong style="color: #8a2432; font-weight: 700">Royal Albert Hall</strong> <span style="color: #a59a88">/</span> London</p>
 </div>
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">19 October 2026</p>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/meta2.jpg" alt="Shivek Sacklecha singing with guitar and cajon at the Meta Diwali event" style="object-position:47% center"><img src="images/meta1.jpg" alt="Shivek Sacklecha performing at the Meta Diwali event" style="object-position:48% center"><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2"></button></div></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">28 October 2026</p>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Meta Diwali Event</h3>
+<p style="margin: 0; color: #4a443d">Corporate event</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a">Meta (Facebook)</p>
+</div>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/ab1.jpg" alt="Shivek Sacklecha singing at Aabahon 2026, Chiswick Town Hall" style="object-position:50% 40%"><img class="" src="images/ab2.jpg" alt="Shivek Sacklecha singing at Aabahon 2026" style="object-position:50% 30%"><img class="" src="images/ab3.jpg" alt="Guitarist performing at Aabahon 2026" style="object-position:50% 35%"><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2" class=""></button><button type="button" aria-label="Photo 3" class=""></button></div></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">19 October 2026</p>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Aabahon 2026</h3>
-<p style="margin: 0; color: #cfcac0">Live performance</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Chiswick Town Hall <span style="color: #6e695f">/</span> London</p>
+<p style="margin: 0; color: #4a443d">Live performance</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a">Chiswick Town Hall <span style="color: #a59a88">/</span> London</p>
 </div>
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">10 October 2026</p>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/portrait.jpg" alt="Shivek Sacklecha on stage under red lights at SoulJam" style="object-position:50% 20%"><img class="" src="images/sj2.jpg" alt="Shivek Sacklecha with his band at SoulJam" style="object-position:53% center"><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2" class=""></button></div></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">10 October 2026</p>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">SoulJam</h3>
-<p style="margin: 0; color: #cfcac0">Live performance</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Scala <span style="color: #6e695f">/</span> King&rsquo;s Cross, London</p>
+<p style="margin: 0; color: #4a443d">Live performance</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a">Scala <span style="color: #a59a88">/</span> King&rsquo;s Cross, London</p>
 </div>
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">3 October 2026</p>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/sj3.jpg" alt="Shivek Sacklecha singing at SoulJam" style="object-position:50% 40%"><img class="" src="images/sj4.jpg" alt="Shivek Sacklecha performing with his band at SoulJam" style="object-position:52% center"><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2" class=""></button></div></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">3 October 2026</p>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">SoulJam</h3>
-<p style="margin: 0; color: #cfcac0">Live performance</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Band on the Wall <span style="color: #6e695f">/</span> Manchester</p>
+<p style="margin: 0; color: #4a443d">Live performance</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a">Band on the Wall <span style="color: #a59a88">/</span> Manchester</p>
 </div>
-<div style="border: 1px solid #2a261e; background: #0f0f0f; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
-<div aria-hidden="true" style="width: 30px; height: 1px; background: #cdb168; margin-bottom: 14px"></div>
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #e4e0d8; font-variant-numeric: tabular-nums">5 July 2026</p>
+<div style="border: 1px solid #e2d8c7; background: #f3ece0; padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 10px">
+<div class="ec"><img class="on" src="images/with3.jpg" alt="Shivek Sacklecha with Amrita Kaur" style="object-position:center 40%"></div>
+<div aria-hidden="true" style="width: 30px; height: 2px; background: #d08a2b; margin-bottom: 14px"></div>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #3d3832; font-variant-numeric: tabular-nums">5 July 2026</p>
 <h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Amrita Kaur in concert</h3>
-<p style="margin: 0; color: #cfcac0">With Amrita Kaur</p>
-<p style="margin: 0; font-size: 14px; color: #a8a297">Royal Festival Hall, Southbank Centre <span style="color: #6e695f">/</span> London</p>
+<p style="margin: 0; color: #4a443d">With Amrita Kaur</p>
+<p style="margin: 0; font-size: 14px; color: #6b645a">Royal Festival Hall, Southbank Centre <span style="color: #a59a88">/</span> London</p>
 </div>
 </div>
 </div>
 </section>
 
-<section id="highlights" style="background: #0f0f0f; border-top: 1px solid #1f1c17">
-<div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 88px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 72px; align-items: center">
-<div style="position: relative; flex: 1 1 320px; min-width: 0; max-width: 480px">
-<img src="images/suit.jpg" alt="Shivek Sacklecha in a suit performing with dancers" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 30% 30%; display: block">
-</div>
-<div style="flex: 999 1 360px; min-width: 0; max-width: 540px; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #cdb168">Performance highlights</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance">From club stages to the Royal Albert Hall.</h2>
-<ul style="list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column">
-<li style="display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid #2a261e; color: #dcd7cd"><span aria-hidden="true" style="flex: 0 0 6px; height: 6px; border-radius: 50%; background: #cdb168; transform: translateY(-3px)"></span><span>Diwali Celebration at the Royal Albert Hall, alongside Kavita Krishnamurthy and the orchestra</span></li>
-<li style="display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid #2a261e; color: #dcd7cd"><span aria-hidden="true" style="flex: 0 0 6px; height: 6px; border-radius: 50%; background: #cdb168; transform: translateY(-3px)"></span><span>Orchestral Qawwali Project at the Royal Albert Hall</span></li>
-<li style="display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid #2a261e; color: #dcd7cd"><span aria-hidden="true" style="flex: 0 0 6px; height: 6px; border-radius: 50%; background: #cdb168; transform: translateY(-3px)"></span><span>Performer at the Meta (Facebook) Diwali Event</span></li>
-<li style="display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid #2a261e; color: #dcd7cd"><span aria-hidden="true" style="flex: 0 0 6px; height: 6px; border-radius: 50%; background: #cdb168; transform: translateY(-3px)"></span><span>Royal Festival Hall, Southbank Centre, with Amrita Kaur</span></li>
-<li style="display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid #2a261e; color: #dcd7cd"><span aria-hidden="true" style="flex: 0 0 6px; height: 6px; border-radius: 50%; background: #cdb168; transform: translateY(-3px)"></span><span>SoulJam at Scala, London and Band on the Wall, Manchester</span></li>
-<li style="display: flex; gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid #2a261e; color: #dcd7cd"><span aria-hidden="true" style="flex: 0 0 6px; height: 6px; border-radius: 50%; background: #cdb168; transform: translateY(-3px)"></span><span>Aabahon 2026 at Chiswick Town Hall, London</span></li>
-</ul>
-</div>
-</div>
-</section>
-
-<section id="artists" style="border-top: 1px solid #1f1c17">
-<div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 88px; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #cdb168">Shared stages</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance">Alongside the artists he admires</h2>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 16px">
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<div style="position: relative">
-<img src="images/with1.jpg" alt="Shivek Sacklecha seated with Kavita Krishnamurthy at a rehearsal" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 35%; display: block">
-</div>
-<figcaption style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; line-height: 1.2; color: #f2efe9">With Kavita Krishnamurthy</figcaption>
-</figure>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<div style="position: relative">
-<img src="images/with2.jpg" alt="Shivek Sacklecha standing with Salim Merchant" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; display: block">
-</div>
-<figcaption style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; line-height: 1.2; color: #f2efe9">With Salim Merchant</figcaption>
-</figure>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<div style="position: relative">
-<img src="images/with3.jpg" alt="Shivek Sacklecha backstage with Amrita Kaur" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 45%; display: block">
-</div>
-<figcaption style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; line-height: 1.2; color: #f2efe9">With Amrita Kaur</figcaption>
-</figure>
-</div>
-</div>
-</section>
-
-<section id="repertoire" style="border-top: 1px solid #1f1c17">
+<section id="bookings" style="background: #f3ece0; border-top: 1px solid #e8dfd0">
 <div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 80px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #dcd7cd">Repertoire</p>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; text-wrap: balance; max-width: 760px">Bollywood, Sufi, Indian classical and folk</h2>
-<p style="margin: 0; color: #cfcac0; max-width: 620px">Ten years of classical training shape every set, from a qawwali with full orchestra to a Bollywood favourite the whole room sings along to.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px">
-<a href="https://www.instagram.com/reel/Dbt7ddkM3wr/" style="flex: 1 1 260px; max-width: 420px; display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; border: 1px solid #3a352c; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Watch live clip 1</a>
-<a href="https://www.instagram.com/reel/DfIkcFNu9EQ/" style="flex: 1 1 260px; max-width: 420px; display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; border: 1px solid #3a352c; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Watch live clip 2</a>
-<a href="https://youtube.com/@shiveksacklecha7450" style="flex: 1 1 260px; max-width: 420px; display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; box-sizing: border-box; border: 1px solid #3a352c; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">More on YouTube</a>
-</div>
-</div>
-</section>
-
-<section id="bookings" style="background: #0f0f0f; border-top: 1px solid #1f1c17">
-<div style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 80px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #cdb168">Bookings</p>
+<p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">Bookings / Social</p>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.1; text-wrap: balance; max-width: 760px">Book Shivek for your concert, festival or celebration.</h2>
-<p style="margin: 0; color: #cfcac0; max-width: 620px">Available as an opening act or featured performer. Email <a href="mailto:shiveksacklecha@gmail.com">shiveksacklecha@gmail.com</a> or send a message on Instagram.</p>
-<a href="mailto:shiveksacklecha@gmail.com" style="display: flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; min-height: 52px; padding: 0 28px; box-sizing: border-box; margin-top: 10px; background: linear-gradient(90deg, #b8923a 0%, #ecd68c 50%, #b8923a 100%); color: #14110a; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Email for bookings</a>
+<p style="margin: 0; color: #4a443d; max-width: 620px">Available as an opening act or featured performer. Email <a href="mailto:shiveksacklecha@gmail.com">shiveksacklecha@gmail.com</a> or send a message on Instagram.</p>
+<a href="mailto:shiveksacklecha@gmail.com" style="display: flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; min-height: 52px; padding: 0 28px; box-sizing: border-box; margin-top: 10px; background: #8a2432; color: #faf6ef; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-radius: 999px">Email for bookings</a>
+<div class="sc-grid" id="social" style="width: 100%; margin-top: 18px">
+<a href="https://www.instagram.com/shivek.live/" class="sc"><span class="sc-ic sc-ig"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></span><span class="sc-tx"><span class="sc-nm">Instagram</span><span class="sc-hd">@shivek.live</span></span><svg aria-hidden="true" class="sc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<a href="https://youtube.com/@shiveksacklecha7450" class="sc"><span class="sc-ic sc-yt"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24"><path fill="#fff" d="M9.5 8.2v7.6l6.6-3.8z"></path></svg></span><span class="sc-tx"><span class="sc-nm">YouTube</span><span class="sc-hd">@shiveksacklecha7450</span></span><svg aria-hidden="true" class="sc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+<a href="mailto:shiveksacklecha@gmail.com" class="sc"><span class="sc-ic sc-ml"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span><span class="sc-tx"><span class="sc-nm">Email</span><span class="sc-hd">shiveksacklecha@gmail.com</span></span><svg aria-hidden="true" class="sc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+</div>
 </div>
 </section>
 
-<footer style="border-top: 1px solid #1f1c17">
+<footer style="border-top: 1px solid #e8dfd0">
 <div style="max-width: 1160px; margin: 0 auto; padding: 24px 24px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center">
-<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #a8a297">&copy; Shivek Sacklecha</span>
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #6b645a">&copy; Shivek Sacklecha</span>
 <div style="display: flex; gap: 10px">
-<a href="mailto:shiveksacklecha@gmail.com" aria-label="Email Shivek Sacklecha" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #3a352c; border-radius: 50%">
+<a href="mailto:shiveksacklecha@gmail.com" aria-label="Email Shivek Sacklecha" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #c9bca5; border-radius: 50%">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
 </a>
-<a href="https://youtube.com/@shiveksacklecha7450" aria-label="Shivek Sacklecha on YouTube" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #3a352c; border-radius: 50%">
+<a href="https://youtube.com/@shiveksacklecha7450" aria-label="Shivek Sacklecha on YouTube" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #c9bca5; border-radius: 50%">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="m10 9.5 5 2.5-5 2.5z"></path></svg>
 </a>
-<a href="https://www.instagram.com/shivek.live/" aria-label="Shivek Sacklecha on Instagram" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #3a352c; border-radius: 50%">
+<a href="https://www.instagram.com/shivek.live/" aria-label="Shivek Sacklecha on Instagram" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #c9bca5; border-radius: 50%">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg>
 </a>
 </div>
@@ -217,6 +245,16 @@ a:focus-visible{outline:2px solid #e2c676;outline-offset:3px}
 </footer>
 
 </div>
+<script>
+(function(){var L='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>',R='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
+document.querySelectorAll('.ec').forEach(function(c){var im=c.querySelectorAll('img'),d=c.querySelectorAll('.ec-dots button');if(im.length<2)return;var i=0,t;
+function go(n){n=(n+im.length)%im.length;i=n;im.forEach(function(x,k){x.classList.toggle('on',k===n)});d.forEach(function(x,k){x.classList.toggle('on',k===n)})}
+function auto(){clearInterval(t);if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;t=setInterval(function(){go(i+1)},3500)}
+['prev','next'].forEach(function(k){var b=document.createElement('button');b.type='button';b.className='ec-arrow ec-'+k;b.setAttribute('aria-label',k==='prev'?'Previous photo':'Next photo');b.innerHTML=k==='prev'?L:R;b.addEventListener('click',function(e){e.stopPropagation();go(i+(k==='prev'?-1:1));auto()});c.appendChild(b)});
+d.forEach(function(b,k){b.addEventListener('click',function(){go(k);auto()})});
+var x0=null;c.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});c.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));auto()}x0=null});
+auto()})})();
+</script>
 <script data-goatcounter="https://shiveksacklecha.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
