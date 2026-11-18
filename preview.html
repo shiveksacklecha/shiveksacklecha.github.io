@@ -49,7 +49,7 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 @media (prefers-reduced-motion: reduce){.ec img{transition:none}}
 .ec-about{margin:0;width:100%}
 .ec-cap{position:absolute;left:16px;bottom:44px;padding:6px 12px;background:rgba(250,246,239,.92);color:#1d1a17;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .8s}
-.ec-about img:nth-of-type(2).on ~ .ec-cap{opacity:1}
+.ec-about img.salim.on ~ .ec-cap{opacity:1}
 .spw{display:flex;gap:8px;height:clamp(440px,52vw,560px)}
 .sp{position:relative;flex:0 0 64px;border:0;padding:0;margin:0;overflow:hidden;cursor:pointer;background:var(--c);color:#fff;text-align:left;font:inherit;transition:flex .55s cubic-bezier(.6,0,.2,1)}
 .sp.on{flex:1 1 auto;cursor:default}
@@ -85,9 +85,7 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 </header>
 
 <section id="top" style="position: relative; height: clamp(620px, 68vw, 860px); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end">
-<img src="images/hero.jpg" alt="Shivek Sacklecha singing on stage with his band" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 25%">
-<img class="heroB" src="images/teal.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; opacity: 0">
-<img class="heroC" src="images/portrait.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; opacity: 0">
+<video autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-label="Shivek Sacklecha performing live" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%"><source src="video/hero.mp4" type="video/mp4"></video>
 <div aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(20,12,10,0.35) 0%, rgba(20,12,10,0.15) 30%, rgba(20,12,10,0.8) 72%, rgba(20,12,10,0.95) 100%)"></div>
 <div style="position: relative; width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(54px, 10vw, 128px); line-height: 0.92; letter-spacing: 0.01em; text-transform: uppercase; max-width: 9em">Shivek Sacklecha</h1>
@@ -107,7 +105,7 @@ a:focus-visible{outline:2px solid #8a2432;outline-offset:3px}
 
 <section id="about" style="max-width: 1160px; margin: 0 auto; padding: 72px 24px 88px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 72px; align-items: center">
 <div style="position: relative; flex: 1 1 320px; min-width: 0; max-width: 480px">
-<div class="ec ec-about"><img class="on" src="images/guitar.jpg" alt="Shivek Sacklecha singing and playing acoustic guitar" style="object-position:center 18%"><img src="images/with2.jpg" alt="Shivek Sacklecha with Salim Merchant" style="object-position:center 30%"><span class="ec-cap" aria-hidden="true">With Salim Merchant</span><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2: with Salim Merchant"></button></div></div>
+<div class="ec ec-about"><img class="on" src="images/guitar.jpg" alt="Shivek Sacklecha singing and playing acoustic guitar" style="object-position:center 18%"><img class="salim" src="images/with2.jpg" alt="Shivek Sacklecha with Salim Merchant" style="object-position:center 30%"><img src="images/hero.jpg" alt="Shivek Sacklecha singing on stage with his band" style="object-position:55% 25%"><img src="images/teal.jpg" alt="Shivek Sacklecha singing under a spotlight" style="object-position:center 30%"><img src="images/portrait.jpg" alt="Shivek Sacklecha on stage under red lights" style="object-position:center 15%"><span class="ec-cap" aria-hidden="true">With Salim Merchant</span><div class="ec-dots"><button type="button" aria-label="Photo 1" class="on"></button><button type="button" aria-label="Photo 2: with Salim Merchant" class=""></button><button type="button" aria-label="Photo 3" class=""></button><button type="button" aria-label="Photo 4" class=""></button><button type="button" aria-label="Photo 5" class=""></button></div></div>
 </div>
 <div style="flex: 999 1 360px; min-width: 0; max-width: 540px; display: flex; flex-direction: column; gap: 20px">
 <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #8a2432">About</p>
